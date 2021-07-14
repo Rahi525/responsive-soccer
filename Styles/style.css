@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+:root{
+    --banner-bg:#2D25A0;
+    --button-bg:#E02C6D;
+    --hover-bg: #c4849c;
+    --back-bg: #ffffff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background: whitesmoke;
+}
+
+img{
+    width: 100%;
+}
+
+.button{
+    background:var(--button-bg);
+    color: var(--back-bg);
+    text-transform: capitalize;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.button:hover{
+    background: var(--hover-bg);
+    padding: 12px 22px;
+    transition: 0.1s;
+}
+
+.container{
+    width: 1160px;
+    margin: auto;
+}
+
+/* basic css end */
+
+/* navbar section start */
+nav{
+    background-color: var(--banner-bg);
+    position: sticky;
+    top: 0;
+}
+
+nav .container{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+}
+
+menu{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+menu a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color:var(--back-bg);
+}
+
+menu a:hover{
+    color: var(--hover-bg);
+    transition: 0.2s;
+}
+/* navbar section end */
+
+/* title and top banner section start */
+.title-banner-container{
+    background-color: var(--banner-bg);
+}
+
+/* adding highlight section css with hroe section css to reduce repeatation */
+.title-banner-container .container, 
+.highlight-container .container{
+    display: flex;
+    justify-content: space-between;
+    height: 90vh;
+    align-items: center;
+    color: var(--back-bg);
+}
+
+.title-banner-container .title,
+.highlight-container .title{
+    width: 45%;
+    height: 400px;
+}
+
+.title-banner-container .image,
+.highlight-container .image{
+    width: 50%; 
+}
+
+.title-banner-container img, 
+.highlight-container img{
+ transition: transform 0.2s ease-in-out;
+}
+
+.title-banner-container img:hover{
+    transform: translate(-10px, -10px);
+}
+
+.title-banner-container h1,
+.highlight-container h1{
+    font-size: 64px;
+    line-height: 80px;
+    margin-bottom: 30px;
+}
+
+/* title and top banner section end */
+
+/* player section start */
+.player-container .container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap:30px;
+    grid-row-gap:30px;
+    margin: 50px auto; 
+}
+
+article{
+background: var(--back-bg);
+padding: 20px;
+box-shadow: 1px 1px 12px 1px rgba(0, 0, 0, 0.1);
+}
+
+article h3{
+    font-size: 28px;
+}
+/* article section end */
+
+/* highlight section css start */
+.highlight-container h1{
+    font-size: 48px;
+    line-height: 60px;
+    margin-bottom: 0;
+}
+
+.highlight-container p{
+    margin: 20px 0 30px;
+}
+
+.highlight-container .container{
+    color: black;
+}
+/* highlight section css end */
+
+/* footer section start */
+footer .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
+   justify-content: center;
+}
+
+
+footer .img-group{
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer img{
+    width: 100%;
+       
+}
+
+
+footer img:first-child{
+    width: 40%;
+}
+
+footer i{
+    font-size: 32px;
+    color: gray;
+    background-color: gainsboro;
+     -radius: 50%;
+    padding: 5px;
+    margin-right: 15px;
+}
+
+footer i:last-child{
+    margin-right: 0;
+}
+
+footer p{
+    margin-top: 25px;
+    font-size: 18px;
+}
+.icons i{
+    border-radius: 50%;
+    padding: 10px;
+}
+/* footer section end  */
+
+   /* ----*----
+Media quearies
+     ---*---*/
+/* For mobile device */
+@media only screen and (max-width:688px) {
+    nav .container{
+        width: 688px;
+        display: flex;
+        justify-content: space-between;
+        background-color: var(--banner-bg);
+    }
+    .container{
+        width: 668px;
+        margin: auto;
+        background: var(--back-bg);
+    }
+    .player-container .container{
+        grid-template-columns: repeat(1,1fr);
+    }
+    nav{
+        background: var(--banner-bg);
+    }
+    .title-banner-container .container, .highlight-container
+    .container{
+        color: var(--back-bg);
+    }
+
+}
